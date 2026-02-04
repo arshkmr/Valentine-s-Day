@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Switch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="tab-section">
+      <div class="tab-wrapper">
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab active" data-tab="html">HTML</button>
+          <button class="tab" data-tab="css">CSS</button>
+          <button class="tab" data-tab="js">JavaScript</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <div class="content active" id="html">
+            <h2>HTML Structure</h2>
+            <p>
+              HTML is the backbone of every website. It defines the structure
+              and layout of content using elements like headings, paragraphs,
+              images, and links.
+            </p>
+          </div>
+
+          <div class="content" id="css">
+            <h2>CSS Styling</h2>
+            <p>
+              CSS is used to style HTML elements. It controls colors, fonts,
+              spacing, layouts, animations, and responsiveness.
+            </p>
+          </div>
+
+          <div class="content" id="js">
+            <h2>JavaScript Functionality</h2>
+            <p>
+              JavaScript adds interactivity to websites. It handles events,
+              animations, API calls, and dynamic content updates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script src="script.js"></script>
+  </body>
+</html>

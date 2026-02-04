@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gift Card Scroll Animation</title>
+
+<!-- CSS FILE -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="spacer"></div>
+
+    <div class="gift-wrapper">
+    <div class="gift-card" id="giftCard">
+
+        <!-- RIBBONS -->
+        <div class="ribbon-vertical"></div>
+        <div class="ribbon-horizontal"></div>
+
+        <!-- BOW -->
+        <div class="bow">
+        <div class="bow-center"></div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="card-content">
+            <div class="brand">
+                <img src="assets/xten-logo-white.png" alt="XTEN-AV Logo">
+            </div>
+
+            <div class="amount">
+                <h1>€25</h1>
+                <span></span>
+                <p>GIFT<br>VOUCHER.</p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <script>
+const card = document.getElementById("giftCard");
+
+let animationStarted = false;
+let scrollLocked = false;
+let lockY = 0;
+let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+function lockScroll() {
+  if (scrollLocked) return;
+
+  lockY = window.scrollY;
+
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${lockY}px`;
+  document.body.style.width = "100%";
+
+  // 🔥 compensate scrollbar removal
+  document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+  scrollLocked = true;
+}
+
+function unlockScroll() {
+  if (!scrollLocked) return;
+
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  document.body.style.paddingRight = "";
+
+  window.scrollTo(0, lockY);
+  scrollLocked = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (animationStarted) return;
+
+  const rect = card.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  if (rect.top <= vh * 0.6) {
+    animationStarted = true;
+
+    lockScroll();
+
+    card.scrollIntoView({
+      behavior: "instant",
+      block: "center"
+    });
+
+    requestAnimationFrame(() => {
+      card.classList.add("zoom-in");
+
+      setTimeout(() => {
+        card.classList.add("ribbon-open");
+      }, 300);
+
+      setTimeout(() => {
+        unlockScroll();
+      }, 1500); // animation complete
+    });
+  }
+});
+</script>
+
+
+
+
+</body>
+</html>

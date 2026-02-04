@@ -1,0 +1,571 @@
+/* ===============================
+        RESET & BASE
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===============================
+        RESET & BASE END
+================================ */
+
+/* ===============================
+        BUTTONS
+================================ */
+
+.btn {
+  height: 44px;
+  padding: 0 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+
+  border-radius: 12px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 8px;
+  border: 1px solid #235ddb;
+  background: #3669d9;
+
+  /* Shadow/xs */
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+  color: var(--White, #fff);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+
+.btn-primary:hover {
+  background: #3f6ae1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* ================= SECONDARY BUTTON ================= */
+.btn-secondary {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+  color: #2b2b2b;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* ===============================
+        BUTTONS END
+================================ */
+
+/* ===============================
+        HERO SECTION
+================================ */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  /* padding-top: 140px; */
+
+  background: url("assets_v2/Background.png") lightgray 0px 0px / 100% 100%
+    no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  /* padding: 90px 179px 496px 202px; */
+
+  padding-bottom: 400px;
+}
+
+.hero-heading-container {
+  max-width: 760px;
+}
+
+.hero-heading-container h1 {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1f2937;
+}
+
+/* SUB HEADING */
+.hero-heading-container h3 {
+  font-family: Poppins;
+  font-style: normal;
+  margin-top: 45px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  line-height: 150%;
+}
+
+.hero-paragraph-container {
+  margin-top: 16px;
+  max-width: 720px;
+}
+
+.hero-paragraph-container p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #2b2b2b;
+  width: 645px;
+}
+
+/* ================= BUTTON WRAPPER ================= */
+.hero-button {
+  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= HERO VIDEO WRAPPER ================= */
+.hero-video-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 35px; /* 👈 controls how much overlaps */
+  transform: translateX(-50%);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* ================= VIDEO CONTAINER ================= */
+.hero-video-container {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 0 0 1px rgba(17, 24, 39, 0.16), 0 2px 2px -2px rgba(17, 24, 39, 0.05),
+    0 4px 4px 0 rgba(17, 24, 39, 0.05), 0 8px 8px 0 rgba(17, 24, 39, 0.05),
+    0 16px 16px 0 rgba(17, 24, 39, 0.05), 0 32px 32px 0 rgba(17, 24, 39, 0.05);
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  align-items: center;
+}
+
+/* ================= VIDEO ================= */
+.hero-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.trusted-section {
+  width: 100%;
+  /* margin-left: calc(50% - 50vw); */
+  padding: 365px 0 48px;
+  background: #ffffff;
+  overflow: hidden;
+  text-align: center;
+  /* position: relative;  */
+}
+
+.slider-carousel2 {
+  padding-block: 6px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 20% 80%, #000, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000, transparent);
+}
+
+.slider-container2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.list1 {
+  display: flex;
+  gap: 18px;
+  animation: autoScroll 120s linear infinite;
+}
+
+/* duplicate the content virtually */
+.list1::after {
+  content: attr(data-logos); /* trick: JS will fill this */
+  display: flex;
+}
+
+.list1:hover {
+  animation-play-state: paused !important;
+}
+
+.item1 {
+  width: var(--width);
+  height: var(--height);
+  flex-shrink: 0;
+}
+
+.item1 img {
+  width: 75%;
+  height: 75%;
+  transition: filter 0.5s ease-in-out;
+  filter: brightness(0.5);
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-carousel2[reverse="true"] .list1 {
+  animation: reverseScroll 120s linear infinite;
+}
+
+@keyframes reverseScroll {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider:hover .item1 img {
+  filter: grayscale(1);
+}
+
+.slider .item1:hover img {
+  filter: grayscale(0);
+}
+
+.slider-container-wrapper2 h2 {
+  width: 25%;
+  color: #2b2b2b;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 56px */
+}
+.slider-container-wrapper2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.slider-container2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ===============================
+        STORY / ABOUT SECTION
+================================ */
+
+.story-section {
+  width: 100%;
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+/* WRAPPER */
+.story-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  /* grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px; */
+}
+
+.story-left {
+  flex: 0 0 50%;
+}
+
+/* ================= LEFT ================= */
+
+.story-left h2 {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: Poppins;
+  font-style: normal;
+  line-height: 120%;
+  color: #2b2b2b;
+  margin-bottom: 24px;
+  align-self: stretch;
+}
+
+.story-left .top-paragraph {
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #637381;
+  margin-bottom: 16px;
+  max-width: 480px;
+}
+
+/* ===============================
+        STORY BUTTON
+================================ */
+
+.story-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 24px;
+  padding: 12px 24px;
+  background: #eaecf0;
+  color: #2b2b2b;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration: none;
+
+  border-radius: 8px;
+  border: none;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover (subtle, Figma-like) */
+.story-btn:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+/* ================= RIGHT ================= */
+
+.story-right {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD (FIGMA STYLE) */
+.story-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 32px;
+
+  background: #f9fafb;
+  border-radius: 24px;
+
+  /* box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 20px 40px rgba(0, 0, 0, 0.06); */
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* IMAGE */
+.story-image img {
+  width: 100%;
+  /* max-width: 360px; */
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* ===============================
+        STATS SECTION
+================================ */
+
+.stats-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.stats-wrapper {
+  max-width: 1200px;
+  margin: 10px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  background: #F9FAFB;
+  padding-top: 3px;
+}
+
+/* CARD */
+.stat-card {
+  background: #ffffff;
+  padding: 24px;
+
+  overflow: hidden;
+  height: auto;
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 1st card → only top-right */
+.stat-card:nth-child(1) {
+  border-top-right-radius: 16px;
+}
+
+/* 2nd & 3rd → both top corners */
+.stat-card:nth-child(2),
+.stat-card:nth-child(3) {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* 4th card → only top-left */
+.stat-card:nth-child(4) {
+  border-top-left-radius: 16px;
+}
+
+/* TOP ICON AREA */
+.stat-top {
+  display: flex;
+  align-items: center;
+  /* gap: 6px; */
+  height: 24px;
+}
+
+.stat-top img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+
+  margin-left: -10px;
+  position: relative;
+}
+
+/* NUMBER */
+.stat-card h3 {
+  margin: 8px 0 6px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #2b2b2b;
+  letter-spacing: -0.02em;
+}
+
+/* TEXT */
+.stat-card p {
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+
+/* STAR */
+.star {
+  width: 17px;
+  height: 17px;
+  aspect-ratio: 1/1;
+  color: #F9B21D;
+  font-size: 35px;
+}
+
+/* AVATARS */
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+  /* border: 2px solid #ffffff; */
+  margin-left: -13px;
+  object-fit: cover;
+
+  position: relative;
+}
+
+/* RIGHTMOST ON TOP (FIGMA BEHAVIOR) */
+.avatars img:nth-child(1) { z-index: 1; }
+.avatars img:nth-child(2) { z-index: 2; }
+.avatars img:nth-child(3) { z-index: 3; }
+.avatars img:nth-child(4) { z-index: 4; }
+
+/* First avatar no overlap */
+.avatars img:first-child {
+  margin-left: 0;
+}
